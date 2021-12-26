@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  margin-top: 40px;
+  text-align: center;
+  .datos {
+    form {
+      .field {
+        margin-bottom: 20px;
+        .control {
+            margin-bottom: 15px;
+          .input {
+            width: 90%;
+            max-width: 400px;
+          }
+        }
+      }
+      .select {
+        select {
+          width:200px;
+          text-align: center;
+        }
+      }
+      .buttonSubmit {
+        margin-top: 15px;
+      }
+    }
+  }
+}
