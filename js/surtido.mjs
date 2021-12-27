@@ -3,22 +3,59 @@
 import {
     frutas
 } from "./dom1.mjs";
+// se exporta para uso en otro documento
 export const inicializadora = new frutas()
 export const introductoria = inicializadora.frutera()
 
 let listaFrutass = document.querySelectorAll('.elementoFruta')
+let arrayFrutas = [...listaFrutass]
 
-console.log(listaFrutass)
+let coleccionFrutas = [
+    {
+        manzana: [
+            // poner la cantidad de manzanas aquí dentro
+        ]
+    },
+    {
+        pera : [
+            // poner la cantidad de peras aquí dentro
+        ]
+    }
+]
 
-listaFrutass.forEach((el,index)=>{
-    console.log(`el elemento es ${el} y su pocision en el array es ${index}`)
-})
+/*
+arrayFrutas.forEach((el,index)=>{
+    //console.log(`el elemento es ${el.value} y la pocision es ${index}`)
+    // no funciona el forEach bien ahi
+    if(el.value === "manzana"){
+        coleccionFrutas[0].manzana.push(el.value)
+        console.log(coleccionFrutas[0].manzana);
+    }
+})*/
+
+
+/*
+for(let fruta of arrayFrutas) {
+    console.log(fruta.value)
+}
+*/
 
 
 function tipoFruta(){
+    let inputFrutas = document.getElementById('cFrutas').value;
+    inputFrutas = Number(inputFrutas)
     const tipo = document.getElementById('listaFrutas').value;
+    
     console.log(`haz ingresado ${tipo}`)
+    if(tipo === "manzana"){
+        coleccionFrutas[0].manzana.push(inputFrutas)
+        console.log(coleccionFrutas[0].manzana);
+    }
 }
+
+
+
+// esta funcion maneja el surtido // está perfecta no modificar
 
 
 function surtidoFrutas(a) {
