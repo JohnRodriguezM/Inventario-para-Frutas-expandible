@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
-        <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <title>Document</title>
 </head>
 
@@ -17,8 +17,8 @@
     <header>
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item" href="https://bulma.io">
-                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                <a class="navbar-item" href="#">
+                    <h1>Registro General</h1>
                 </a>
                 <!---->
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="true"
@@ -80,7 +80,7 @@
     </header>
     <main>
         <section class="datos">
-            <form id ="form">
+            <form id="form">
                 <div class="field">
                     <label class="label" for="cFrutas">Cantidad de frutas surtidas</label>
                     <div class="control">
@@ -88,40 +88,45 @@
                     </div>
                     <label class="label" for="cFrutasVendidas">Cantidad de frutas vendidas</label>
                     <div class="control">
-                        <input class="input" type="number" placeholder="¿cuantas Frutas se vendieron?" id="cFrutasVendidas">
+                        <input class="input" type="number" placeholder="¿cuantas Frutas se vendieron?"
+                            id="cFrutasVendidas">
                     </div>
-                    
-
                 </div>
-                <div class="select">
-                    <select>
-                        <datalist>
-                        <option>Tipo de fruta</option>
-                        <option value="manzana">manzana</option>
-                        <option value="banana">banana</option>
-                        <option value="papaya">papaya</option>
-                        <option value="otra fruta">Otra fruta</option>
+                <!--datalist, necesaria abtracciond de datos pendiente-->
+                <div class = "field">
+                <section class="dataList">
+                    <label class ="label" for = "listaFrutas">Introduce el tipo de fruta:</label>
+                        <input required class = "input" list="fruits" name="myFruits" id = "listaFrutas">
+                    <datalist id="fruits">
+                        <option class = "elementoFruta"  class = "elementoFruta" value="manzana">manzana</option>
+                        <option class = "elementoFruta" value="banana">banana</option>
+                        <option class = "elementoFruta" value="pera">pera</option>
+                        <option class = "elementoFruta" value="aguacate">aguacate</option>
+                        <option class = "elementoFruta" value="naranja">naranja</option>
+                        <option class = "elementoFruta" value="piña">piña</option>
+                        <option class = "elementoFruta" value="tomate">tomate</option>
+                        <option class = "elementoFruta" value="papaya">papaya</option>
+                        <option class = "elementoFruta" value="guanabana">guanabana</option>
+                        <option class = "elementoFruta" value="uvas">uvas</option>
                     </datalist>
-                    </select>
-                </div>
-                </div>
-                <div class = "buttonSubmit">
-                <button class="button is-hovered" id = "button2">Registrar datos</button>
+                </section>
+            </div>
+                <div class="buttonSubmit">
+                    <button class="button is-hovered" id="button2">Registrar datos</button>
                 </div>
             </form>
-            <div class = "buttonSubmit">
-                <button class="button is-hovered"  id = "button" >Mostrar cantidad actual de frutas</button>
-                </div>
+            <div class="buttonSubmit">
+                <button class="button is-hovered" id="button">Mostrar cantidad actual de frutas</button>
+            </div>
         </section>
     </main>
-    <footer id = "footer">
-                
+    <footer id="footer">
     </footer>
 </body>
-<script type = "module" src="../js/dom1.mjs"></script>
-<script type = "module" src="../js/surtido.mjs"></script>
-<script type = "module" src="../js/ventas.mjs"></script>
-<script type = "module" src="../js/frutasActuales.mjs"></script>
+<script type="module" src="../js/dom1.mjs"></script>
+<script type="module" src="../js/surtido.mjs"></script>
+<script type="module" src="../js/ventas.mjs"></script>
+<script type="module" src="../js/frutasActuales.mjs"></script>
 <script src="../js/navBar.js"></script>
 
 </html>

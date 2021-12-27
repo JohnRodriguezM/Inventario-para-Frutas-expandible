@@ -30,8 +30,6 @@ fruteria.surtir(60)*/
 //tipoFrutas(el) {
 //    console.log(`el tipo de fruta añadido es ${el}`)
 
-
-
 export class frutas {
 
     frutera() {

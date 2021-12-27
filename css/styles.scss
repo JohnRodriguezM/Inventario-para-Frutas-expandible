@@ -3,34 +3,85 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+// variables básicas de colores:
+$letraBasico : #363636;
+$sombra-Basica: 0px 3px 9px 5px #CCCCCC;
+
 html {
   scroll-behavior: smooth;
 }
+body{
+  max-width:1000px;
+  margin: 0 auto;
+  box-shadow: $sombra-Basica;
+  height: 100vh;
+  padding-left:10px;
+  padding-right:10px; 
+}
+// paquete de extension básico
+%letra{
+  font-weight: bold;
+  font-size : 1rem;
+  color: $letraBasico;
+}
+
+%distanciaBasica{
+  margin: 25px auto;
+}
+
+%distanciaSupBasica{
+  margin-top:20px;
+}
+
+%basicoInput{
+  width: 90%;
+  max-width: 400px;
+}
+
+%footer{
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold,
+}
 
 main {
-  margin-top: 40px;
+  @extend %distanciaBasica;
   text-align: center;
   .datos {
     form {
       .field {
         margin-bottom: 20px;
         .control {
-            margin-bottom: 15px;
+          margin-bottom: 15px;
           .input {
-            width: 90%;
-            max-width: 400px;
+            @extend %basicoInput;
+            //width: 90%;
+            //max-width: 400px;
           }
         }
       }
-      .select {
+      .dataList {
+        label{
+          @extend %letra;
+        }
+        .input {
+          @extend %basicoInput;
+          //width: 90%;
+          //max-width: 400px;
+        }
         select {
-          width:200px;
+          width: 200px;
           text-align: center;
         }
       }
       .buttonSubmit {
-        margin-top: 15px;
+        @extend %distanciaBasica;
       }
     }
   }
+}
+
+footer{
+  @extend %footer;
 }

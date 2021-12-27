@@ -1,3 +1,4 @@
+'use strict';
 const $nav = document.addEventListener('DOMContentLoaded', () => {
 
     // Get all "navbar-burger" elements
