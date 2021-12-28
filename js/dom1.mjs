@@ -30,8 +30,9 @@ fruteria.surtir(60)*/
 //tipoFrutas(el) {
 //    console.log(`el tipo de fruta añadido es ${el}`)
 
-export class frutas {
 
+
+export class frutas {
     frutera() {
         const $footer = document.getElementById('footer');
         let elemento = document.createElement("div")
