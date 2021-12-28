@@ -60,8 +60,6 @@ function tipoFrutaSuma() {
     // tipo de fruta
     let tipo = document.getElementById('listaFrutas').value;
 
-
-
     if (tipo === "manzana") {
         let empuje = coleccionFrutas[0].manzana.push($inputFrutass - $inputVentas)
 
