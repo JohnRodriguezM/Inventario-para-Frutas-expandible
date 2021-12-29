@@ -1,3 +1,6 @@
+// funciona perfecto
+
+
 import { frutas } from "./dom1.mjs";
 import { inicializadora,introductoria } from "./surtido.mjs";
 

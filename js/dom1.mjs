@@ -52,8 +52,13 @@ export class frutas {
                 return frutas;
             },
             actual: function () {
+                elemento.style.marginTop = "35px"
+                elemento.style.color = "red"
+                if(frutas > 0){
+                    elemento.style.color = "green"
+                }
                 //pendiente validaciones internas
-                elemento.innerHTML = `cantidad de frutas actuales es igual a  ${frutas}`;
+                elemento.innerHTML = `Las frutas actuales son  ${frutas}`;
                 //return console.log(`La cantidad actual de frutas es ${frutas}`);
             }
         }

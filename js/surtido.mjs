@@ -1,8 +1,13 @@
+// TODO: SUPER pendiente
+// EXTENDER A LOS DEMÁS TIPO DE FRUTAS Y MIRAR SI SE PUEDEN AGREGAR FRUTAS A TRÁVES DE PERSONALIZACIÓN DEL USUARIO
+
+
 'use strict';
 
 import {
     frutas
 } from "./dom1.mjs";
+import {elemento } from "./estilosEHijosFoo.mjs";
 // se exporta para uso en otro documento
 export const inicializadora = new frutas()
 export const introductoria = inicializadora.frutera()
@@ -49,6 +54,7 @@ for(let fruta of arrayFrutas) {
 */
 
 
+   
 
 function tipoFrutaSuma() {
     // cantidad de frutas
@@ -59,6 +65,7 @@ function tipoFrutaSuma() {
     $inputVentas = Number($inputVentas)
     // tipo de fruta
     let tipo = document.getElementById('listaFrutas').value;
+    
 
     if (tipo === "manzana") {
         let empuje = coleccionFrutas[0].manzana.push($inputFrutass - $inputVentas)
@@ -67,9 +74,11 @@ function tipoFrutaSuma() {
         let arrayReduce = array.reduce((a, b) => {
             return a + b;
         })
-        console.log(`La cantidad actual de manzanas es igual a ${arrayReduce}`)
-        //let x = (`las manzanas que has sacado son iguales a ${arrayReduce - //$inputVentas} `);
-        //console.log(x)
+        elemento.textContent = `${arrayReduce}`;
+
+        //s
+        let x = (`las manzanas que has sacado son iguales a ${$inputVentas}`)
+        console.log(x);
     }
 
 
