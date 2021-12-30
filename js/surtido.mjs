@@ -7,7 +7,9 @@
 import {
     frutas
 } from "./dom1.mjs";
-import {elemento } from "./estilosEHijosFoo.mjs";
+import {
+    elemento
+} from "./estilosEHijosFoo.mjs";
 // se exporta para uso en otro documento
 export const inicializadora = new frutas()
 export const introductoria = inicializadora.frutera()
@@ -54,7 +56,7 @@ for(let fruta of arrayFrutas) {
 */
 
 
-   
+
 
 function tipoFrutaSuma() {
     // cantidad de frutas
@@ -65,35 +67,43 @@ function tipoFrutaSuma() {
     $inputVentas = Number($inputVentas)
     // tipo de fruta
     let tipo = document.getElementById('listaFrutas').value;
-    
+
 
     if (tipo === "manzana") {
         let empuje = coleccionFrutas[0].manzana.push($inputFrutass - $inputVentas)
-
         let array = coleccionFrutas[0].manzana
         let arrayReduce = array.reduce((a, b) => {
             return a + b;
         })
-        elemento.textContent = `${arrayReduce}`;
-
-        //s
-        let x = (`las manzanas que has sacado son iguales a ${$inputVentas}`)
-        console.log(x);
+        let contenido = elemento.textContent = `${arrayReduce}`;
     }
 
+    // SE EMPIEZAN A REALIZAR PRUEBAS DEL LOCAL_STORAGE, PENDIENTE DE MANEJO
 
-    /*
-    if (tipo === "pera")
-    {
-        let empuje = coleccionFrutas[1].peras.push($inputFrutas)
-        let array = coleccionFrutas[1].peras
-        let arrayReduce = array.reduce((a,b)=>{
-            return a + b;
-        })
-        console.log(arrayReduce)
-    }
-    */
+    //let y = localStorage.setItem("valorManzana", JSON.stringify//(arrayReduce))
+    //let obtener = localStorage.getItem("valorManzana")
+    //window.onload.console.log(obtener)
+    //let obtener = localStorage.getItem//("valorManzana")
+    //elemento.textContent = obtener;
+    //console.log(obtener);
+    //s
+    let x = (`las manzanas que has sacado son iguales a ${$inputVentas}`)
+    console.log(x);
 }
+
+
+/*
+if (tipo === "pera")
+{
+    let empuje = coleccionFrutas[1].peras.push($inputFrutas)
+    let array = coleccionFrutas[1].peras
+    let arrayReduce = array.reduce((a,b)=>{
+        return a + b;
+    })
+    console.log(arrayReduce)
+}
+*/
+
 
 
 // esta funcion maneja el surtido // está perfecta no modificar

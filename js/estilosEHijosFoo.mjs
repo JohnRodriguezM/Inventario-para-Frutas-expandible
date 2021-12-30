@@ -10,3 +10,4 @@ let th = document.getElementById('tdLinea1')
 export let elemento = document.createElement('td');
 export let agregarTd1 = th.appendChild(elemento)
 elemento.textContent = 0
+
