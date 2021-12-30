@@ -1,7 +1,6 @@
 // TODO: SUPER pendiente
 // EXTENDER A LOS DEMÁS TIPO DE FRUTAS Y MIRAR SI SE PUEDEN AGREGAR FRUTAS A TRÁVES DE PERSONALIZACIÓN DEL USUARIO
 
-
 'use strict';
 
 import {
@@ -14,17 +13,12 @@ import {
 export const inicializadora = new frutas()
 export const introductoria = inicializadora.frutera()
 
-// traigo el nodo de los elementos
-let listaFrutass = document.querySelectorAll('.elementoFruta')
-let arrayFrutas = [...listaFrutass]
-
+// traigo el nodo de los elementos, y los almaceno dentro de un array
+const listaFrutass = document.querySelectorAll('.elementoFruta')
+const arrayFrutas = [...listaFrutass]
+console.log(arrayFrutas)
 
 // traigo los elmentos del formulario
-
-
-
-
-
 
 // creo un array de objetos con un array para darles push
 const coleccionFrutas = [{
@@ -57,8 +51,7 @@ for(let fruta of arrayFrutas) {
 
 
 
-
- export function tipoFrutaSuma() {
+export function tipoFrutaSuma() {
     // cantidad de frutas
     let $inputFrutass = document.getElementById('cFrutas').value;
     $inputFrutass = Number($inputFrutass)
@@ -75,9 +68,9 @@ for(let fruta of arrayFrutas) {
         let arrayReduce = array.reduce((a, b) => {
             return a + b;
         })
+        let arrayPush = coleccionFrutas[0].manzana.push(arrayReduce)
         let contenido = elemento.textContent = `${arrayReduce}`;
     }
-
     // SE EMPIEZAN A REALIZAR PRUEBAS DEL LOCAL_STORAGE, PENDIENTE DE MANEJO
 
     //let y = localStorage.setItem("valorManzana", JSON.stringify//(arrayReduce))
@@ -90,6 +83,8 @@ for(let fruta of arrayFrutas) {
     let x = (`las manzanas que has sacado son iguales a ${$inputVentas}`)
     console.log(x);
 }
+
+
 
 
 /*
@@ -142,3 +137,5 @@ function surtidoFrutas(a) {
 document.getElementById('form').addEventListener('submit', surtidoFrutas)
 
 // todo, crear funcion que reciba el valor del tipo de fruta
+
+//function surtidoFrutasa(a,)

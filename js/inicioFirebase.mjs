@@ -26,6 +26,9 @@ const db = getFirestore(app)
 
 // creacion de funcion para base de datos
 
+
+// se comenta momentaneamente para no seguir enviando a database
+/*
 function sendFruits(a) {
     a.preventDefault();
     const envioDatos = async() => {
@@ -43,4 +46,8 @@ function sendFruits(a) {
     envioDatos();
 }
 
-const envio1 = document.getElementById('form').addEventListener("submit",sendFruits) // debia traer el id del formulario,
+const envio1 = document.getElementById('form').addEventListener("submit",sendFruits)
+*/
+
+
+// debia traer el id del formulario,
