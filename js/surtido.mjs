@@ -8,7 +8,7 @@ import {
     frutas
 } from "./dom1.mjs";
 import {
-    elemento
+    elemento,atributo
 } from "./estilosEHijosFoo.mjs";
 // se exporta para uso en otro documento
 export const inicializadora = new frutas()
@@ -58,7 +58,7 @@ for(let fruta of arrayFrutas) {
 
 
 
-function tipoFrutaSuma() {
+ export function tipoFrutaSuma() {
     // cantidad de frutas
     let $inputFrutass = document.getElementById('cFrutas').value;
     $inputFrutass = Number($inputFrutass)
@@ -93,7 +93,15 @@ function tipoFrutaSuma() {
 
 
 /*
-if (tipo === "pera")
+
+function actual(){
+    let manza = document.getElementById(atributo)
+    localStorage.setItem('valorM',manza)
+    let traer = localStorage.getItem('manzana')
+    console.log(traer);
+}
+actual()
+/*if (tipo === "pera")
 {
     let empuje = coleccionFrutas[1].peras.push($inputFrutas)
     let array = coleccionFrutas[1].peras
