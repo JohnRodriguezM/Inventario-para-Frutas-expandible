@@ -64,11 +64,15 @@ export function tipoFrutaSuma() {
 
     if (tipo === "manzana") {
         let empuje = coleccionFrutas[0].manzana.push($inputFrutass - $inputVentas)
+        console.log(empuje);
         let array = coleccionFrutas[0].manzana
+        console.log(array);
         let arrayReduce = array.reduce((a, b) => {
             return a + b;
         })
-        let arrayPush = coleccionFrutas[0].manzana.push(arrayReduce)
+        console.log(arrayReduce);
+        // esta linea no servía, pues me empujaba nuevamente los valores al array
+        //let arrayPush = coleccionFrutas[0].manzana.push(arrayReduce)
         let contenido = elemento.textContent = `${arrayReduce}`;
     }
     // SE EMPIEZAN A REALIZAR PRUEBAS DEL LOCAL_STORAGE, PENDIENTE DE MANEJO
