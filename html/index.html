@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>2.0  dDocument</title>
+    <title>2.0 dDocument</title>
 </head>
 
 <body>
@@ -83,33 +83,39 @@
         </nav>
     </header>
     <section class="divisionM-F">
-    <main>
-        <button>
-            <a href="history.go(-1)">volver</a>
-        </button>
-        <section class="datos">
-            <form id="form">
-                <div class="field">
-                    <label class="label" for="cFrutas">Cantidad de frutas surtidas</label>
-                    <div class="control">
-                        <input class="input" type="number" required placeholder="¿cuantas Frutas vas a surtir?"
-                            id="cFrutas">
+        <main>
+            <button>
+                <a href="history.go(-1)">volver</a>
+            </button>
+            <section class="datos">
+                <form id="form">
+                    <div class="field">
+
+                        <label class="label" for="cFrutas">Cantidad de frutas surtidas</label>
+                        <div class="control">
+
+                            <input class="input" type="number" required placeholder="¿cuantas Frutas vas a surtir?"
+                                id="cFrutas">
+                        </div>
+
+                        <label class="label" for="cFrutasVendidas">Cantidad de frutas vendidas</label>
+
+                        <div class="control">
+
+                            <input class="input" type="number" required placeholder="¿cuantas Frutas se vendieron?"
+                                id="cFrutasVendidas">
+
+                        </div>
                     </div>
-                    <label class="label" for="cFrutasVendidas">Cantidad de frutas vendidas</label>
-                    <div class="control">
-                        <input class="input" type="number" required placeholder="¿cuantas Frutas se vendieron?"
-                            id="cFrutasVendidas">
-                    </div>
-                </div>
-                <!--datalist, necesaria abtracciond de datos pendiente-->
-                <div class="field">
-                    <section class="dataList">
-                        <label class="label" for="listaFrutas">Introduce el tipo de fruta:</label>
-                        <input required class="input" list="fruits" name="myFruits" id="listaFrutas">
-                        <datalist id="fruits">
-                            <option class="elementoFruta" class="elementoFruta" value="manzana">manzana</option>
-                            <option class="elementoFruta" value="pera">pera</option>
-                            <!--
+                    <!--datalist, necesaria abtracciond de datos pendiente-->
+                    <div class="field">
+                        <section class="dataList">
+                            <label class="label" for="listaFrutas">Introduce el tipo de fruta:</label>
+                            <input required class="input" list="fruits" name="myFruits" id="listaFrutas">
+                            <datalist id="fruits">
+                                <option class="elementoFruta" class="elementoFruta" value="manzana">manzana</option>
+                                <option class="elementoFruta" value="pera">pera</option>
+                                <!--
                         
                         <option class = "elementoFruta" value="aguacate">aguacate</option>
                         <option class = "elementoFruta" value="naranja">naranja</option>
@@ -118,99 +124,67 @@
                         <option class = "elementoFruta" value="papaya">papaya</option>
                         <option class = "elementoFruta" value="guanabana">guanabana</option>
                         <option class = "elementoFruta" value="uvas">uvas</option>-->
-                        </datalist>
-                    </section>
-                </div>
+                            </datalist>
+                        </section>
+                    </div>
+                    <div class="buttonSubmit">
+                        <input type = "submit" class="button is-hovered" id="button2" value = "registrar datos"/>
+                    </div>
+                </form>
                 <div class="buttonSubmit">
-                    <button class="button is-hovered" id="button2">Registrar datos</button>
+                    <button class="button is-hovered" id="button">Mostrar cantidad actual de frutas</button>
                 </div>
-            </form>
-            <div class="buttonSubmit">
-                <button class="button is-hovered" id="button">Mostrar cantidad actual de frutas</button>
-            </div>
-        </section>
-    </main>
-    <footer id="footer">
-        <section class="section" style="padding: 0;">
-            <div class="container" id = "container" style=" width:320px; max-width:320px;">
-                <br>
+            </section>
+        </main>
+        <footer id="footer">
+            <section class="section" style="padding: 0;">
+                <div class="container" id="container" style=" width:320px; max-width:320px;">
+                    <br>
 
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Frutas</th>
-                            <th>Cantidad Actual</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr id = "tdLinea1">
-                            <td>Manzana</td>
-                            <!--se crea un nuevo td dinamicamente en el js, la variable es elemento y esta es estilosEhijo....mjs-->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Frutas</th>
+                                <th>Cantidad Actual</th>
+                            </tr>
+                        </thead>
+                        <!--  va a ser reemplazado por el template que voy dar  -->
+                        <tbody>
 
-                        </tr>
-                        <tr id = "tdLinea2">
-                            <td>Pera</td>
-                            <td>
-                                <!--Smith-->
-                            </td>
+                        </tbody>
+                    </table>
 
-                        </tr>
-                        <tr id = "tdLinea3">
-                            <td>Banana</td>
-                            <td>
-                                <!--Joe Root-->
-                            </td>
-
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
-        </section>
+                </div>
+            </section>
     </section>
     </footer>
     <!--este es un template para ser usado en js-->
-    <template>
-        <section class="section">
-            <div class="container">
-                <br>
-
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Position</th>
-                            <th>Name</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Sachin</td>
-
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Smith</td>
-
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Joe Root</td>
-
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
-        </section>
+    <template id="crud-template">
+        <tr id="tr-datos">
+            <td class="fruta">frutas</td>
+            <td class="cantidadFruta"># de frrutas</td>
+            <td>
+                <button class="fas fa-edit edit" title="edit"></button>
+                <button class="fa-solid fa-trash-can delete" title="delete"></button>
+            </td>
+        </tr>
     </template>
+
+
+    <script type = "module" src="../js-manejo/prueba.mjs"></script>
+    <script type = "module" src="../js-manejo/POO-metodos.mjs"></script>
+    <!-- documentos de edicion arriba -->
+  <!--   <script type="module" src="../js/inicioFirebase.mjs"></script>
+    <script type="module" src="../js/estilosEHijosFoo.mjs"></script>
+    <script type="module" src="../js/dom1.mjs"></script>
+    <script type="module" src="../js/surtido.mjs"></script>
+    <script type="module" src="../js/ventas.mjs"></script>
+    <script type="module" src="../js/frutasActuales.mjs"></script>
+    <script src="../js/navBar.js"></script> -->
+
+
 </body>
-<script type = "module" src="../js/inicioFirebase.mjs"></script>
-<script type="module" src="../js/estilosEHijosFoo.mjs"></script>
-<script type="module" src="../js/dom1.mjs"></script>
-<script type="module" src="../js/surtido.mjs"></script>
-<script type="module" src="../js/ventas.mjs"></script>
-<script type="module" src="../js/frutasActuales.mjs"></script>
-<script src="../js/navBar.js"></script>
+
+
 
 </html>
