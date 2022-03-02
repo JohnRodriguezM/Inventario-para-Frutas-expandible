@@ -14,8 +14,8 @@ body {
   margin: 0 auto;
   -webkit-box-shadow: 0px 3px 9px 5px #CCCCCC;
           box-shadow: 0px 3px 9px 5px #CCCCCC;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 button:active {
@@ -44,8 +44,22 @@ main .datos form .dataList .input, main .datos form .field .control .input {
 footer {
   margin: 10px auto;
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+#traerDatos {
+  padding: 7px;
+  border: 1px solid #000;
+  display: none;
+  color: #fff;
+  margin: 15px auto;
+}
+
+td, th {
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px solid #000;
 }
 
 main {
@@ -61,6 +75,10 @@ main .datos form .dataList select {
   width: 200px;
   text-align: center;
 }
+footer .crud-table {
+  margin: 0 auto;
+}
+
 @media (min-width: 1100px) {
   .divisionM-F {
     display: -ms-grid;
@@ -71,7 +89,30 @@ main .datos form .dataList select {
     padding-bottom: 100px;
   }
 
-  #footer .section #container {
-    max-width: 450px;
+  #footer .section #container .crud-table {
+    margin: 15px auto;
+  }
+}
+.table-responsive {
+  margin: 15px auto;
+  min-height: 0.1%;
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .table-responsive {
+    width: 99%;
+    margin: 15px auto;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  .table-responsive > .table > thead > tr > th,
+.table-responsive > .table > tbody > tr > th,
+.table-responsive > .table > tfoot > tr > th,
+.table-responsive > .table > thead > tr > td,
+.table-responsive > .table > tbody > tr > td,
+.table-responsive > .table > tfoot > tr > td {
+    white-space: nowrap;
   }
 }

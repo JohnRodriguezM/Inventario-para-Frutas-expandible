@@ -1,10 +1,15 @@
 'usu strict';
+// d es la constante donde se guarda el documento.
+import {d} from './index.mjs'
 
-export class frutas {
+
+export class Manejador_Frutas {
+    // se crea funcion para generar las diferentes clasuras
     frutera() {
-        const $footer = document.getElementById('footer');
-        let elemento = document.createElement("div")
-        $footer.appendChild(elemento)
+        /* const $footer = d.getElementById('footer');
+        let elemento = d.createElement("div")
+        $footer.appendChild(elemento) */
+        ////// Este elemento en comentario generaba la "cantudad" de frutas actuales, por el momento es inncesario
         let frutas = 0;
         return {
             surtir: function (frutasCompradas) {

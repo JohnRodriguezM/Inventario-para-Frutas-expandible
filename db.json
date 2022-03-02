@@ -1,14 +1,19 @@
 {
-    "frutas":[
-        {
-            "id":1,
-            "fruta": "manzana",
-            "cantidad":0
-        },
-        {
-            "id":2,
-            "fruta": "pera",
-            "cantidad":0
-        }
-    ]
+  "frutas": [
+    {
+      "fruta": "banana",
+      "cantidad": "455",
+      "id": 3
+    },
+    {
+      "fruta": "guanabana",
+      "cantidad": "10",
+      "id": 4
+    },
+    {
+      "fruta": "fresa ",
+      "cantidad": "10",
+      "id": 5
+    }
+  ]
 }
