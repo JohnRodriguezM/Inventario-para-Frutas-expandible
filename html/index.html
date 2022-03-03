@@ -9,95 +9,40 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="../css/styles.css">
     <title>2.0 dDocument</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar " role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="#">
-                    <h1>Registro General</h1>
-                </a>
-                <!---->
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="true"
-                    data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-            <!---->
-            <!---->
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start"
-                    <a class="navbar-item">
-                        Home
-                    </a>
-
-                    <a class="navbar-item">
-                        Documentation
-                    </a>
-
-                    <div class="navbar-item has-dropdown is-hoverable" aria-hidden="true" aria-expanded="false">
-                        <a class="navbar-link" aria-hidden="true" aria-expanded="false">
-                            More
-                        </a>
-
-                        <div class="navbar-dropdown" aria-hidden="true" aria-expanded="false">
-                            <a class="navbar-item">
-                                About
-                            </a>
-                            <a class="navbar-item">
-                                Jobs
-                            </a>
-                            <a class="navbar-item">
-                                Contact
-                            </a>
-                            <hr class="navbar-divider">
-                            <a class="navbar-item">
-                                Report an issue
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <button>
-                                <a class="button is-primary">
-                                    <strong>Sign up</strong>
-                                </a>
-                            </button>
-                            <button>
-                                <a class="button is-light">
-                                    Log in
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <section class="popup_annadirFruta">
+            <section style="display:none;" id="sectionAnnadirFruta">
+                <button id="buttonAnnadir">quieres añadir frutas al registro actual?</button> <br><br>
+                <section class="annadirYes" style = "display:none">
+                    <input type="number" placeholder="estas son tus frutas actuales" id="frutasActuales"><br><br>
+                    <input type="number" placeholder="cuantas frutas quieres añadir" id="fruticas" required> <br> <br>
+                    <button class="buttonSuma">Añadir frutas</button> <br><br>
+                    <button class = "cerrar">xxxx</button>
+                </section>
+            </section>
+        </section>
     </header>
     <section class="divisionM-F">
         <main>
-            <h2 id = "title">añadir frutas</h2>
+            <h2 id="title" style="margin-bottom: 20px;">Añadir frutas</h2>
             <section class="datos">
                 <form id="form">
                     <div class="field">
 
-                        <label class="label" for="cFrutas">Cantidad de frutas surtidas</label>
+                        <label class="label" for="cFrutas">Fruta a registrar</label>
                         <div class="control">
 
-                            <input class="input" type="text" required placeholder="¿que fruta vas a surtir?"
+                            <input class="input" type="text" autofocus required placeholder="¿que fruta vas a surtir?"
                                 id="cFrutas">
                         </div>
 
-                        <label class="label" for="cFrutasVendidas">Cantidad de frutas vendidas</label>
+                        <label class="label" for="cFrutasVendidas" required>Cantidad de frutas</label>
 
                         <div class="control">
 
@@ -108,7 +53,7 @@
                     </div>
                     <!--datalist, necesaria abtracciond de datos pendiente-->
                     <div class="field">
-                       <!-- <section class="dataList">
+                        <!-- <section class="dataList">
                             <label class="label" for="listaFrutas">Introduce el tipo de fruta:</label>
                             <input  class="input" list="fruits" name="myFruits" id="listaFrutas">
                             <datalist id="fruits">
@@ -124,10 +69,10 @@
                             </datalist>
                         </section>
                     </div>-->
-                    <div class="buttonSubmit">
-                        <input type = "submit" class="button is-hovered" id="sub" value = "registrar datos"/>
-                    </div>
-                    <input type="hidden" name="id">
+                        <div class="buttonSubmit">
+                            <input type="submit" class="button is-hovered" id="sub" value="registrar datos" />
+                        </div>
+                        <input type="hidden" name="id">
                 </form>
                 <div class="buttonSubmit">
                     <button id="traerDatos">ya no quieres editar? click</button>
@@ -135,24 +80,24 @@
             </section>
         </main>
         <footer>
-                <div class="table-responsive" id="container" style=" width:100%; max-width:620px;">
-                    <br>
+            <div class="table-responsive" id="container" style=" width:100%; max-width:620px;">
+                <br>
 
-                    <table class="crud-table">
-                        <thead>
-                            <tr>
-                                <th>acciones</th>
-                                <th>cantidad</th>
-                                <th>frutas</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!--  va a ser reemplazado por el template que voy dar  -->
+                <table class="crud-table">
+                    <thead>
+                        <tr>
+                            <th>acciones</th>
+                            <th>cantidad</th>
+                            <th>frutas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--  va a ser reemplazado por el template que voy dar  -->
 
-                        </tbody>
-                    </table>
+                    </tbody>
+                </table>
 
-                </div>
+            </div>
     </section>
     </footer>
     <!--este es un template para ser usado en js-->
@@ -168,14 +113,21 @@
     </template>
 
 
-    <script type = "module" src="../js-manejo/index.mjs"></script>
-    <script type = "module" src="../js-manejo/POO-metodos.mjs"></script>
-    <script type = "module" src="../js-manejo/post.mjs"></script>
-    <script type = "module" src="../js-manejo/delete.mjs"></script>
+    <script type="module" src="../js-manejo/index.mjs"></script>
+    <script type="module" src="../js-manejo/POO-metodos.mjs"></script>
+    <script type="module" src="../js-manejo/post.mjs"></script>
+    <script type="module" src="../js-manejo/delete.mjs"></script>
     <!-- documentos de edicion arriba -->
     <!-- manejo del navbar para el header  -->
     <script src="../js_navbar/navBar.js"></script>
-  <!--   <script type="module" src="../js/inicioFirebase.mjs"></script>
+
+    <!--  manejo de las operacion de fruteras -->
+    <script type="module" src="../js-manejo/annadirFrutas.mjs"></script>
+
+
+
+
+    <!--   <script type="module" src="../js/inicioFirebase.mjs"></script>
     <script type="module" src="../js/estilosEHijosFoo.mjs"></script>
     <script type="module" src="../js/dom1.mjs"></script>
     <script type="module" src="../js/surtido.mjs"></script>

@@ -6,10 +6,6 @@ import {d} from './index.mjs'
 export class Manejador_Frutas {
     // se crea funcion para generar las diferentes clasuras
     frutera() {
-        /* const $footer = d.getElementById('footer');
-        let elemento = d.createElement("div")
-        $footer.appendChild(elemento) */
-        ////// Este elemento en comentario generaba la "cantudad" de frutas actuales, por el momento es inncesario
         let frutas = 0;
         return {
             surtir: function (frutasCompradas) {
@@ -25,14 +21,12 @@ export class Manejador_Frutas {
                 return frutas;
             },
             actual: function () {
-                elemento.style.marginTop = "35px"
+                elemento.style.marginTop = "35px" // este elemento es inexistente en el momento
                 elemento.style.color = "red"
                 if(frutas > 0){
                     elemento.style.color = "green"
                 }
-                //pendiente validaciones internas
                 elemento.innerHTML = `Las frutas actuales son  ${frutas}`;
-                //return console.log(`La cantidad actual de frutas es ${frutas}`);
             }
         }
     }

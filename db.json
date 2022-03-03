@@ -2,18 +2,28 @@
   "frutas": [
     {
       "fruta": "banana",
-      "cantidad": "455",
+      "cantidad": "93",
       "id": 3
     },
     {
       "fruta": "guanabana",
-      "cantidad": "10",
+      "cantidad": "55",
       "id": 4
     },
     {
       "fruta": "fresa ",
       "cantidad": "10",
       "id": 5
+    },
+    {
+      "fruta": "aguacate",
+      "cantidad": "140",
+      "id": 6
+    },
+    {
+      "fruta": "pera",
+      "cantidad": "15",
+      "id": 7
     }
   ]
 }

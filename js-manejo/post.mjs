@@ -70,7 +70,7 @@ d.addEventListener('submit',async e => {
 d.addEventListener('click', async e => {
     const {$title,$form,$datos} = necesarios;
     if(e.target.matches('.edit')){
-    $title.textContent = "editar personaje";
+    $title.textContent = "editar cantidad de frutas";
     $form.cFrutas.value = e.target.dataset.fruta;
     $form.cFrutas.disabled = true;
     $form.cFrutasVendidas.value = e.target.dataset.cantidad;
