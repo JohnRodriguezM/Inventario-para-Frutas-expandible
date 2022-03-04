@@ -7,14 +7,14 @@ import {Manejador_Frutas} from './POO-metodos.mjs'
 import {d,url,necesarios} from './index.mjs';
 
 
-console.log(Manejador_Frutas)
+/* console.log(Manejador_Frutas)
 
 
 const inicializadoraDeClase = new Manejador_Frutas;
 const accesoFunciones = inicializadoraDeClase.frutera();
 
 console.log(accesoFunciones)
-
+ */
 
 d.addEventListener('submit',async e => {
     const {$form} = necesarios;
@@ -36,10 +36,11 @@ d.addEventListener('submit',async e => {
                 }
                 let peticion = await fetch(url,options)
                 let data = await peticion.json()
+                location.reload()
                 console.log(data)
             }
             catch(err){
-
+                console.log(err)
             }
         }else{
             // manejo del put
@@ -57,6 +58,7 @@ d.addEventListener('submit',async e => {
                 let peticion = await fetch(`${url}/${e.target.id.value}`,options)
                 let data = await peticion.json()
                 console.log(data)
+                location.reload()
             }
             catch(err){
                 console.log(err)
@@ -67,7 +69,7 @@ d.addEventListener('submit',async e => {
 
 // manejo del PUT
 
-d.addEventListener('click', async e => {
+d.addEventListener('click', e => {
     const {$title,$form,$datos} = necesarios;
     if(e.target.matches('.edit')){
     $title.textContent = "editar cantidad de frutas";

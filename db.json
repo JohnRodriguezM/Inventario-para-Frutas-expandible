@@ -1,19 +1,14 @@
 {
   "frutas": [
     {
-      "fruta": "fresa ",
-      "cantidad": "10",
-      "id": 5
+      "fruta": "pera",
+      "cantidad": "66",
+      "id": 1
     },
     {
-      "fruta": "aguacate",
-      "cantidad": "140",
-      "id": 6
-    },
-    {
-      "fruta": "aguacate",
-      "cantidad": "47",
-      "id": 7
+      "fruta": "uva",
+      "cantidad": "45",
+      "id": 2
     }
   ]
 }

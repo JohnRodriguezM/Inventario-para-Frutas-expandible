@@ -2,6 +2,8 @@
 
 export const d = document;
 export const url = " http://localhost:8000/frutas"
+// es el mismo frutas actuales, pero no me dejó importarlo del modulo de annadir frutas
+let fruta = document.getElementById('frutasActuales')
 
 export const necesarios = {
     $tbody : d.querySelector('tbody'),
@@ -9,7 +11,8 @@ export const necesarios = {
     $template: d.getElementById('crud-template').content,
     $form : d.getElementById('form'),
     $datos: d.getElementById('traerDatos'),
-    $title: d.getElementById('title')
+    $title: d.getElementById('title'),
+    $return: d.getElementById('return')
 }
 
 const getData = async e => {
@@ -40,5 +43,12 @@ const getData = async e => {
     }
 }
 
-getData()
+d.addEventListener('DOMContentLoaded',getData)
 
+d.addEventListener("click", e => {
+    const {$form} = necesarios;
+    if (e.target.matches("#traerDatos")) {
+      location.reload();
+      $form.cFrutasVendidas.value = fruta.value
+    }
+  });
