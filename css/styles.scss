@@ -167,3 +167,24 @@ footer{
 .visible{
   display: block;
 }
+
+
+#sectionAnnadirFruta{
+  text-align: center;
+  z-index: 999;
+  padding:15px;
+}
+
+.absolute{
+  background-color: gray;
+  position: absolute;
+  top:40%;
+  left:50%;
+  margin-left:-175px;
+  width: 100%;
+  max-width:350px;
+}
+
+input[type="number"]{
+  @extend %basicoInput;
+}

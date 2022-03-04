@@ -35,7 +35,7 @@ main .datos form .buttonSubmit, main {
   margin-right: auto;
 }
 
-main .datos form .dataList .input, main .datos form .field .control .input {
+input[type=number], main .datos form .dataList .input, main .datos form .field .control .input {
   width: 90%;
   max-width: 400px;
 }
@@ -118,4 +118,27 @@ footer .crud-table {
 .table-responsive > .table > tfoot > tr > td {
     white-space: nowrap;
   }
+}
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+#sectionAnnadirFruta {
+  text-align: center;
+  z-index: 999;
+  padding: 15px;
+}
+
+.absolute {
+  background-color: gray;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -175px;
+  width: 100%;
+  max-width: 350px;
 }

@@ -1,4 +1,4 @@
-'use strict';
+/* 'use strict';
 const $nav = document.addEventListener('DOMContentLoaded', () => {
 
     // Get all "navbar-burger" elements
@@ -30,4 +30,4 @@ let $div = document.querySelector('.navbar-dropdown');
 $ancla.onclick = () => {
     $div.classList.toggle("flex");
     $div.classList.toggle("hidden")
-}
+} */

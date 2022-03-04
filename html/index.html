@@ -17,12 +17,19 @@
 <body>
     <header>
         <section class="popup_annadirFruta">
-            <section style="display:none;" id="sectionAnnadirFruta">
+            <section class = "hidden" id="sectionAnnadirFruta">
                 <button id="buttonAnnadir">quieres añadir frutas al registro actual?</button> <br><br>
-                <section class="annadirYes" style = "display:none">
+                <button id = "buttonRestar">queres restar frutas al registro actual?</button> <br><br>
+                <section class="annadirYes hidden">
                     <input type="number" placeholder="estas son tus frutas actuales" id="frutasActuales"><br><br>
                     <input type="number" placeholder="cuantas frutas quieres añadir" id="fruticas" required> <br> <br>
                     <button class="buttonSuma">Añadir frutas</button> <br><br>
+                    <button class = "cerrar">xxxx</button>
+                </section>
+                <section class="restarYes hidden">
+                    <input type="number" placeholder="estas son tus frutas actuales" id="frutasActualesResta"><br><br>
+                    <input type="number" placeholder="cuantas frutas quieres restar?" id="fruticasResta" required> <br> <br>
+                    <button class="buttonResta">Restar frutas</button> <br><br>
                     <button class = "cerrar">xxxx</button>
                 </section>
             </section>
@@ -127,13 +134,7 @@
 
 
 
-    <!--   <script type="module" src="../js/inicioFirebase.mjs"></script>
-    <script type="module" src="../js/estilosEHijosFoo.mjs"></script>
-    <script type="module" src="../js/dom1.mjs"></script>
-    <script type="module" src="../js/surtido.mjs"></script>
-    <script type="module" src="../js/ventas.mjs"></script>
-    <script type="module" src="../js/frutasActuales.mjs"></script>
-    <script src="../js/navBar.js"></script> -->
+    <!--   <script type="module" src="../js/inicioFirebase.mjs"></script> -->
 
 
 </body>
