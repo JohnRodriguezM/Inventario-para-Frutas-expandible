@@ -63,6 +63,10 @@ td,th{
   padding-right: 15px;
   border: 1px solid #000;
 }
+#delete{
+  vertical-align: middle;
+  background-color: red;
+}
 
 
 
@@ -177,17 +181,18 @@ footer{
 
 .absolute{
   background-color: #fff;
-  border: 1px solid blue;
   position: absolute;
-  top:20%;
+  top: 40%;
   left:50%;
   margin-left:-250px;
-  height:50%;
-  max-height: 500px;
   width: 100%;
   max-width:500px;
 }
 
 input[type="number"]{
   @extend %basicoInput;
+}
+
+.edit{
+  color: yellow;
 }

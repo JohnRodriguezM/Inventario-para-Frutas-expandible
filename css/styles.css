@@ -61,6 +61,11 @@ td, th {
   border: 1px solid #000;
 }
 
+#delete {
+  vertical-align: middle;
+  background-color: red;
+}
+
 main {
   text-align: center;
 }
@@ -135,13 +140,14 @@ footer .crud-table {
 
 .absolute {
   background-color: #fff;
-  border: 1px solid blue;
   position: absolute;
-  top: 20%;
+  top: 40%;
   left: 50%;
   margin-left: -250px;
-  height: 50%;
-  max-height: 500px;
   width: 100%;
   max-width: 500px;
+}
+
+.edit {
+  color: yellow;
 }

@@ -1,6 +1,4 @@
 'use strict';
-// se importa la clase que contiene los metodos y el closure
-import {Manejador_Frutas} from './POO-metodos.mjs'
 // se importa d, que almacena a document,
 // se importa url
 // se importa objeto de necesarios
@@ -80,7 +78,6 @@ d.addEventListener('click', e => {
     $datos.style.display = "block";
     $datos.style.backgroundColor = "red";
     $datos.style.width = "200px";
-
     $form.sub.value = "enviar cambios";
     }
 })
