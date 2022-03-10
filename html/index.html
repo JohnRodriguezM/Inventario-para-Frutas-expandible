@@ -7,210 +7,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>2.0  dDocument</title>
+    <title>2.0 dDocument</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="#">
-                    <h1>Registro General</h1>
-                </a>
-                <!---->
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="true"
-                    data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-            <!---->
-            <!---->
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item">
-                        Home
-                    </a>
+        <h1 style = "text-align:center; color: black; font-size: 35px; margin-top: 25px;">Inventario empresarial</h1>
+        <!-- section popup de frutas- falta diseño -->
+        <section class="popup_annadirFruta">
+            <section class="hidden" id="sectionAnnadirFruta">
 
-                    <a class="navbar-item">
-                        Documentation
-                    </a>
-
-                    <div class="navbar-item has-dropdown is-hoverable" aria-hidden="true" aria-expanded="false">
-                        <a class="navbar-link" aria-hidden="true" aria-expanded="false">
-                            More
-                        </a>
-
-                        <div class="navbar-dropdown" aria-hidden="true" aria-expanded="false">
-                            <a class="navbar-item">
-                                About
-                            </a>
-                            <a class="navbar-item">
-                                Jobs
-                            </a>
-                            <a class="navbar-item">
-                                Contact
-                            </a>
-                            <hr class="navbar-divider">
-                            <a class="navbar-item">
-                                Report an issue
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <button>
-                                <a class="button is-primary">
-                                    <strong>Sign up</strong>
-                                </a>
-                            </button>
-                            <button>
-                                <a class="button is-light">
-                                    Log in
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+                <button id="buttonAnnadir" class="button">quieres añadir frutas al registro actual?</button> <br> <br>
+                <button id="buttonRestar" class="button">queres restar frutas al registro actual?</button> <br> <br>
+                <button class="return button" style="margin-top: 5px;"><i class="fa-solid fa-xmark return"></i></button>
+                <section class="annadirYes hidden">
+                    <input type="number" class="input" placeholder="estas son tus frutas actuales"
+                        id="frutasActuales"><br><br>
+                    <input type="number" class="input" placeholder="cuantas frutas quieres añadir" id="fruticas"
+                        required> <br> <br>
+                    <button class="buttonSuma button">Añadir frutas</button> <br><br>
+                    <button class="cerrar button"><i class="fa-solid fa-xmark cerrar button"></i></button>
+                </section>
+                <section class="restarYes hidden">
+                    <input type="number" class="input" placeholder="estas son tus frutas actuales"
+                        id="frutasActualesResta"><br><br>
+                    <input type="number" class="input" placeholder="cuantas frutas quieres restar?" id="fruticasResta"
+                        required> <br> <br>
+                    <button class="buttonResta button">Restar frutas</button> <br><br>
+                    <button class="cerrar"><i class="fa-solid fa-xmark cerrar button"></i></button>
+                </section>
+            </section>
+        </section>
     </header>
     <section class="divisionM-F">
-    <main>
-        <button>
-            <a href="history.go(-1)">volver</a>
-        </button>
-        <section class="datos">
-            <form id="form">
-                <div class="field">
-                    <label class="label" for="cFrutas">Cantidad de frutas surtidas</label>
-                    <div class="control">
-                        <input class="input" type="number" required placeholder="¿cuantas Frutas vas a surtir?"
-                            id="cFrutas">
+        <main>
+            <h2 id="title" style="margin-bottom: 20px;">Añadir frutas</h2>
+            <section class="datos">
+                <form id="form">
+                    <div class="field">
+
+                        <label class="label" for="cFrutas">Fruta a registrar</label>
+                        <div class="control">
+
+                            <input class="input" type="text" autofocus required placeholder="¿que fruta vas a surtir?"
+                                id="cFrutas">
+                        </div>
+
+                        <label class="label" for="cFrutasVendidas" id="label_cantidad">Cantidad de frutas</label>
+
+                        <div class="control">
+
+                            <input class="input" type="number" placeholder="¿cuantas frutas vas a surtir?"
+                                id="cFrutasVendidas">
+
+                        </div>
                     </div>
-                    <label class="label" for="cFrutasVendidas">Cantidad de frutas vendidas</label>
-                    <div class="control">
-                        <input class="input" type="number" required placeholder="¿cuantas Frutas se vendieron?"
-                            id="cFrutasVendidas">
-                    </div>
-                </div>
-                <!--datalist, necesaria abtracciond de datos pendiente-->
-                <div class="field">
-                    <section class="dataList">
-                        <label class="label" for="listaFrutas">Introduce el tipo de fruta:</label>
-                        <input required class="input" list="fruits" name="myFruits" id="listaFrutas">
-                        <datalist id="fruits">
-                            <option class="elementoFruta" class="elementoFruta" value="manzana">manzana</option>
-                            <option class="elementoFruta" value="pera">pera</option>
-                            <!--
-                        
-                        <option class = "elementoFruta" value="aguacate">aguacate</option>
-                        <option class = "elementoFruta" value="naranja">naranja</option>
-                        <option class = "elementoFruta" value="piña">piña</option>
-                        <option class = "elementoFruta" value="tomate">tomate</option>
-                        <option class = "elementoFruta" value="papaya">papaya</option>
-                        <option class = "elementoFruta" value="guanabana">guanabana</option>
-                        <option class = "elementoFruta" value="uvas">uvas</option>-->
-                        </datalist>
-                    </section>
-                </div>
+                    <div class="field">
+                        <div class="buttonSubmit">
+                            <input type="submit" class="button is-hovered" id="sub" value="registrar datos" />
+                        </div>
+                        <input type="hidden" name="id">
+                </form>
                 <div class="buttonSubmit">
-                    <button class="button is-hovered" id="button2">Registrar datos</button>
+                    <button id="traerDatos" class="button">ya no quieres editar? click</button>
                 </div>
-            </form>
-            <div class="buttonSubmit">
-                <button class="button is-hovered" id="button">Mostrar cantidad actual de frutas</button>
-            </div>
-        </section>
-    </main>
-    <footer id="footer">
-        <section class="section" style="padding: 0;">
-            <div class="container" id = "container" style=" width:320px; max-width:320px;">
+            </section>
+        </main>
+        <footer>
+            <div class="table-responsive" id="container" style=" width:100%; max-width:620px;">
                 <br>
 
-                <table class="table">
+                <table class="crud-table">
                     <thead>
                         <tr>
-                            <th>Frutas</th>
-                            <th>Cantidad Actual</th>
+                            <th>Acciones</th>
+                            <th>Fruta</th>
+                            <th>Unidades</th>
+                            <input type="address">
                         </tr>
                     </thead>
                     <tbody>
-                        <tr id = "tdLinea1">
-                            <td>Manzana</td>
-                            <!--se crea un nuevo td dinamicamente en el js, la variable es elemento y esta es estilosEhijo....mjs-->
+                        <!--  va a ser reemplazado por el template que voy dar  -->
 
-                        </tr>
-                        <tr id = "tdLinea2">
-                            <td>Pera</td>
-                            <td>
-                                <!--Smith-->
-                            </td>
-
-                        </tr>
-                        <tr id = "tdLinea3">
-                            <td>Banana</td>
-                            <td>
-                                <!--Joe Root-->
-                            </td>
-
-                        </tr>
                     </tbody>
                 </table>
 
             </div>
-        </section>
     </section>
     </footer>
     <!--este es un template para ser usado en js-->
-    <template>
-        <section class="section">
-            <div class="container">
-                <br>
-
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Position</th>
-                            <th>Name</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Sachin</td>
-
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Smith</td>
-
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Joe Root</td>
-
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
-        </section>
+    <template id="crud-template">
+        <tr id="tr-datos">
+            <td>
+                <button class="fas fa-edit edit" title="edit"></button>
+                <button id="delete" class="fa-solid fa-trash-can delete" title="delete"></button>
+            </td>
+            <td class="fruta">frutas</td>
+            <td class="cantidadFruta"># de frrutas</td>
+            
+        </tr>
     </template>
+
+
+    <script type="module" src="../js-manejo/index.mjs"></script>
+    <script type="module" src="../js-manejo/POO-metodos.mjs"></script>
+    <script type="module" src="../js-manejo/post.mjs"></script>
+    <script type="module" src="../js-manejo/delete.mjs"></script>
+    <!-- documentos de edicion arriba -->
+    <!-- manejo del navbar para el header  -->
+    <script src="../js_navbar/navBar.js"></script>
+
+    <!--  manejo de las operacion de fruteras -->
+    <script type="module" src="../js-manejo/annadirFrutas.mjs"></script>
+    <!-- configuracion de firebase hosting -->
+    <script type="module" src="../js/inicioFirebase.mjs"></script>
+
+
 </body>
-<script type = "module" src="../js/inicioFirebase.mjs"></script>
-<script type="module" src="../js/estilosEHijosFoo.mjs"></script>
-<script type="module" src="../js/dom1.mjs"></script>
-<script type="module" src="../js/surtido.mjs"></script>
-<script type="module" src="../js/ventas.mjs"></script>
-<script type="module" src="../js/frutasActuales.mjs"></script>
-<script src="../js/navBar.js"></script>
+
+
 
 </html>
