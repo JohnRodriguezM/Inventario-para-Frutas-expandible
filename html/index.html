@@ -17,62 +17,55 @@
 </head>
 
 <body>
-    <header>
-        <h1 style = "text-align:center; color: black; font-size: 35px; margin-top: 25px;">Inventario empresarial</h1>
-        <!-- section popup de frutas- falta diseño -->
-        <section class="popup_annadirFruta">
-            <section class="hidden" id="sectionAnnadirFruta">
-
-                <button id="buttonAnnadir" class="button">quieres añadir frutas al registro actual?</button> <br> <br>
-                <button id="buttonRestar" class="button">queres restar frutas al registro actual?</button> <br> <br>
-                <button class="return button" style="margin-top: 5px;"><i class="fa-solid fa-xmark return"></i></button>
-                <section class="annadirYes hidden">
-                    <input type="number" class="input" placeholder="estas son tus frutas actuales"
-                        id="frutasActuales"><br><br>
-                    <input type="number" class="input" placeholder="cuantas frutas quieres añadir" id="fruticas"
+  <header>
+    <h1 style = "text-align:center; color: black; font-size: 35px; margin-top: 25px;">Inventario empresarial</h1>
+      <!-- section popup de frutas- falta diseño -->
+      <section class="popup_annadirFruta">
+        <section class="hidden" id="sectionAnnadirFruta">
+          <button id="buttonAnnadir" class="button">quieres añadir frutas al registro actual?</button> <br> <br>
+          <button id="buttonRestar" class="button">queres restar frutas al registro actual?</button> <br> <br>
+          <button class="return button" style="margin-top: 5px;"><i class="fa-solid fa-xmark return"></i></button>
+            <section class="annadirYes hidden">
+              <input type="number" class="input" placeholder="estas son tus frutas actuales"
+                id="frutasActuales"><br><br>
+              <input type="number" class="input" placeholder="cuantas frutas quieres añadir" id="fruticas"
                         required> <br> <br>
-                    <button class="buttonSuma button">Añadir frutas</button> <br><br>
-                    <button class="cerrar button"><i class="fa-solid fa-xmark cerrar button"></i></button>
-                </section>
-                <section class="restarYes hidden">
-                    <input type="number" class="input" placeholder="estas son tus frutas actuales"
-                        id="frutasActualesResta"><br><br>
-                    <input type="number" class="input" placeholder="cuantas frutas quieres restar?" id="fruticasResta"
-                        required> <br> <br>
-                    <button class="buttonResta button">Restar frutas</button> <br><br>
-                    <button class="cerrar"><i class="fa-solid fa-xmark cerrar button"></i></button>
-                </section>
+              <button class="buttonSuma button">Añadir frutas</button> <br><br>
+							<button class="cerrar button"><i class="fa-solid fa-xmark cerrar button"></i></button>
             </section>
+            <section class="restarYes hidden">
+              <input type="number" class="input" placeholder="estas son tus frutas actuales"
+                id="frutasActualesResta"><br><br>
+              <input type="number" class="input" placeholder="cuantas frutas quieres restar?" id="fruticasResta"
+                required> <br> <br>
+              <button class="buttonResta button">Restar frutas</button> <br><br>
+              <button class="cerrar"><i class="fa-solid fa-xmark cerrar button"></i></button>
+            </section>
+        </section>
         </section>
     </header>
     <section class="divisionM-F">
-        <main>
-            <h2 id="title" style="margin-bottom: 20px;">Añadir frutas</h2>
-            <section class="datos">
-                <form id="form">
-                    <div class="field">
-
-                        <label class="label" for="cFrutas">Fruta a registrar</label>
+      <main>
+          <h2 id="title" style="margin-bottom: 20px;">Añadir frutas</h2>
+          <section class="datos">
+              <form id="form">
+                  <div class="field">
+                      <label class="label" for="cFrutas">Fruta a registrar</label>
+                      <div class="control">
+                          <input class="input" type="text" autofocus required placeholder="¿que fruta vas a surtir?"
+                              id="cFrutas">
+                      </div>
+                      <label class="label" for="cFrutasVendidas" id="label_cantidad">Cantidad de frutas</label>
                         <div class="control">
-
-                            <input class="input" type="text" autofocus required placeholder="¿que fruta vas a surtir?"
-                                id="cFrutas">
-                        </div>
-
-                        <label class="label" for="cFrutasVendidas" id="label_cantidad">Cantidad de frutas</label>
-
-                        <div class="control">
-
-                            <input class="input" type="number" placeholder="¿cuantas frutas vas a surtir?"
-                                id="cFrutasVendidas">
-
-                        </div>
-                    </div>
+                          <input class="input" type="number" placeholder="¿cuantas frutas vas a surtir?"
+                            id="cFrutasVendidas">
+                      </div>
+                  </div>
                     <div class="field">
-                        <div class="buttonSubmit">
-                            <input type="submit" class="button is-hovered" id="sub" value="registrar datos" />
-                        </div>
-                        <input type="hidden" name="id">
+                      <div class="buttonSubmit">
+                          <input type="submit" class="button is-hovered" id="sub" value="registrar datos" />
+                      </div>
+                        	<input type="hidden" name="id">
                 </form>
                 <div class="buttonSubmit">
                     <button id="traerDatos" class="button">ya no quieres editar? click</button>
@@ -80,28 +73,24 @@
             </section>
         </main>
         <footer>
-            <div class="table-responsive" id="container" style=" width:100%; max-width:620px;">
-                <br>
-
-                <table class="crud-table">
-                    <thead>
-                        <tr>
-                            <th>Acciones</th>
-                            <th>Fruta</th>
-                            <th>Unidades</th>
-                            <input type="address">
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!--  va a ser reemplazado por el template que voy dar  -->
-
-                    </tbody>
-                </table>
-
+          <div class="table-responsive" id="container" style=" width:100%; max-width:620px;"> <br>
+          	<table class="crud-table">
+              <thead>
+                <tr>
+                  <th>Acciones</th>
+                  <th>Fruta</th>
+                  <th>Unidades</th>
+                  	<!-- <input type="address"> -->
+                </tr>
+              </thead>
+              <tbody>
+                 <!--  va a ser reemplazado por el template que voy dar  -->
+              </tbody>
+            </table>
             </div>
     </section>
     </footer>
-    <!--este es un template para ser usado en js-->
+    <!--este es un template para ser usado en js, este template va a contener los datos generados dinámicamente con la api-->
     <template id="crud-template">
         <tr id="tr-datos">
             <td>

@@ -1,9 +1,9 @@
-// Import the functions you need from the SDKs you need
+'use strict';
+// se importan las funciones requeridas para el uso en firebase en el
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+
+// La configuracion de mi app web
 const firebaseConfig = {
   apiKey: "AIzaSyDsbBbYceGe4KsH0oE-jVp5sID02bhQr6s",
   authDomain: "inventarioproductos-838e2.firebaseapp.com",
@@ -13,5 +13,5 @@ const firebaseConfig = {
   appId: "1:1027906314946:web:83f76c17874fb5bfc8115b"
 };
 
-// Initialize Firebase
+// esta constante app ejecuta inicialize app y como argumento pasa el obj de firebaseConfig
 const app = initializeApp(firebaseConfig);
