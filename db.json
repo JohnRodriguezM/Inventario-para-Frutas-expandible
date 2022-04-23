@@ -1,19 +1,9 @@
 {
   "frutas": [
     {
-      "fruta": "uva",
-      "cantidad": "78",
-      "id": 15
-    },
-    {
-      "fruta": "pera",
-      "cantidad": "4585",
-      "id": 16
-    },
-    {
       "fruta": "guanabana",
       "cantidad": "78",
-      "id": 17
+      "id": 1
     }
   ]
 }
