@@ -2,18 +2,8 @@
   "frutas": [
     {
       "fruta": "arandanos",
-      "cantidad": "92",
+      "cantidad": "100",
       "id": 13
-    },
-    {
-      "fruta": "sandia",
-      "cantidad": "12",
-      "id": 18
-    },
-    {
-      "fruta": "uva",
-      "cantidad": "5",
-      "id": 23
     }
   ]
 }
