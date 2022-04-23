@@ -1,7 +1,7 @@
 'use strict';
 // se importan las funciones requeridas para el uso en firebase en el
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
-
+// pendiente de revisar la actualización de firebase
 
 // La configuracion de mi app web
 const firebaseConfig = {

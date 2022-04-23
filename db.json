@@ -1,54 +1,9 @@
 {
   "frutas": [
     {
-      "fruta": "uva",
-      "cantidad": "184",
-      "id": 2
-    },
-    {
-      "fruta": "naranja",
-      "cantidad": "78",
-      "id": 4
-    },
-    {
-      "fruta": "banana",
-      "cantidad": "99",
-      "id": 5
-    },
-    {
-      "fruta": "manzana",
-      "cantidad": "113",
-      "id": 6
-    },
-    {
-      "fruta": "fresa",
-      "cantidad": "95",
-      "id": 7
-    },
-    {
-      "fruta": "aguacate",
-      "cantidad": "135",
-      "id": 10
-    },
-    {
-      "fruta": "mango",
-      "cantidad": "45",
-      "id": 11
-    },
-    {
       "fruta": "arandanos",
-      "cantidad": "47",
+      "cantidad": "92",
       "id": 13
-    },
-    {
-      "fruta": "piña",
-      "cantidad": "123",
-      "id": 14
-    },
-    {
-      "fruta": "limon",
-      "cantidad": "78",
-      "id": 16
     },
     {
       "fruta": "sandia",
@@ -56,14 +11,9 @@
       "id": 18
     },
     {
-      "fruta": "platanos",
-      "cantidad": "1000",
-      "id": 21
-    },
-    {
-      "fruta": "guanabana",
-      "cantidad": "54",
-      "id": 22
+      "fruta": "uva",
+      "cantidad": "5",
+      "id": 23
     }
   ]
 }

@@ -1,6 +1,14 @@
 "use strict";
+// funciones que se usan el calculo de las fruats
+const suma = (a, b) => a + b;
+const resta = (a, b) => a - b;
+// este archivo js es el que me permite añadir una x cantidad de frutas luego de pulsar el botón editar del documento, BASICAMENTE MANEJA LA OPERACION EL PUT DEL CRUD (EDIT)
+
+// sin embargo, dentro del archivo post.js se hace manejo desde la api de las operacion post y put
 
 import { d, necesarios } from "./index.mjs";
+// se importa la constante d que es la que contiene el document;
+// se importan la constante necesarias que contiene los elementos del html, pero en este docuemento esta constante no se encuentra en uso
 
 const $frutasActuales = d.getElementById("frutasActuales");
 const $SectionAnnadir = d.getElementById("sectionAnnadirFruta");
@@ -13,8 +21,8 @@ const seleccionados = {
   buttonSumar: $SectionAnnadir.querySelector("#buttonAnnadir"),
   buttonRestar: $SectionAnnadir.querySelector("#buttonRestar"),
 };
-//
-function seleccionadosToggle(a,b) {
+// esta function me permite manejar un toggle para los elementos del objeto seleccionado
+const seleccionadosToggle = (a, b) => {
   a.classList.add("visible");
   a.classList.remove("hidden");
   b.classList.add("hidden");
@@ -29,8 +37,8 @@ function ToggleInverse(a, b) {
   b.classList.remove("hidden");
 }
 
-// aparacion botón añadir
-d.addEventListener("click", (e) => {
+// aparacion botón añadir, luego de pulsar el botón de editar
+d.addEventListener("click", e => {
   const { $form } = necesarios;
   if (e.target.matches(".edit")) {
     d.body.style.visibility = "hidden";
@@ -42,30 +50,30 @@ d.addEventListener("click", (e) => {
   }
 });
 
-////////////////////////
-d.addEventListener("click", (e) => {
+// le pego esta funcion al documento la cual me permite añdir una frutas
+d.addEventListener("click", e => {
   if (e.target.matches("#buttonAnnadir")) {
     cerrar.classList.add("hidden");
     // function super util
-    seleccionadosToggle(seleccionados.sumar,seleccionados.buttonRestar);
+    seleccionadosToggle(seleccionados.sumar, seleccionados.buttonRestar);
   }
 });
 
-d.addEventListener("click", (e) => {
+d.addEventListener("click", e => {
   if (e.target.matches("#buttonRestar")) {
     cerrar.classList.add("hidden");
-    seleccionadosToggle(seleccionados.restar,seleccionados.buttonSumar);
+    seleccionadosToggle(seleccionados.restar, seleccionados.buttonSumar);
   }
 });
 
-d.addEventListener("click", (e) => {
+d.addEventListener("click", e => {
   if (e.target.matches(".return")) {
     d.body.style.visibility = "visible";
     Toggle($SectionAnnadir, $SectionAnnadir);
   }
 });
 
-d.addEventListener("click", (e) => {
+d.addEventListener("click", e => {
   if (e.target.matches(".cerrar")) {
     d.body.style.visibility = "visible";
     cerrar.classList.remove("hidden");
@@ -80,16 +88,9 @@ d.addEventListener("click", (e) => {
   }
 });
 
-function suma(a, b) {
-  return a + b;
-}
-
-function resta(a, b) {
-  return a - b;
-}
 
 // para la suma
-d.addEventListener("click", (e) => {
+d.addEventListener("click", e => {
   const { $form } = necesarios;
   if (e.target.matches(".buttonSuma")) {
     let a = suma(
@@ -121,17 +122,3 @@ d.addEventListener("click", (e) => {
     d.body.style.visibility = "visible";
   }
 });
-
-/* const seleccionados = {
-    restar : $SectionAnnadir.querySelector('.restarYes'),
-    sumar : $SectionAnnadir.querySelector('.annadirYes'),
-    buttonSumar: $SectionAnnadir.querySelector('#buttonAnnadir'),
-    buttonRestar : $SectionAnnadir.querySelector('#buttonRestar')
-}
-
-function seleccionadosToggle(a,b,c){
-    const {sumar,buttonRestar} = seleccionados
-    a.querySelector(sumar).classList.add('visible')
-    b.querySelector(sumar).classList.remove('hidden')
-    c.querySelector(buttonRestar).classList.add('hidden')
-} */

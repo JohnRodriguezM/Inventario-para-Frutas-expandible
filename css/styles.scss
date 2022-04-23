@@ -5,70 +5,68 @@
 }
 
 // variables básicas de colores:
-$letraBasico : #363636;
-$sombra-Basica: 0px 3px 9px 5px #CCCCCC;
+$letraBasico: #363636;
+$sombra-Basica: 0px 3px 9px 5px #cccccc;
 
 html {
   scroll-behavior: smooth;
   margin: 0 auto;
 }
-body{
+body {
   margin: 0 auto;
-  /* box-shadow: $sombra-Basica; */
-  padding-left:8px;
-  padding-right:8px; 
+  padding-left: 8px;
+  padding-right: 8px;
 }
 // paquete de extension básico
-button:active{
-transform: scale(.92);
+button:active {
+  transform: scale(0.92);
 }
-%letra{
+%letra {
   font-weight: bold;
-  font-size : 1rem;
+  font-size: 1rem;
   color: $letraBasico;
 }
 
-%distanciaBasica{
+%distanciaBasica {
   margin-top: 50px;
   margin-bottom: 25px;
   margin-left: auto;
   margin-right: auto;
 }
 
-%distanciaSupBasica{
-  margin-top:20px;
+%distanciaSupBasica {
+  margin-top: 20px;
 }
 
-%basicoInput{
+%basicoInput {
   width: 90%;
   max-width: 400px;
 }
 
-%footer{
+%footer {
   margin: 10px auto;
   text-align: center;
   font-size: 1.4rem;
-  font-weight: 500,
+  font-weight: 500;
 }
 
-#traerDatos{
+#traerDatos {
   padding: 7px;
   border: 1px solid #000;
   display: none;
   color: #fff;
   margin: 15px auto;
 }
-td,th{
+td,
+th {
   padding-left: 15px;
   padding-right: 15px;
   border: 1px solid #000;
 }
-#delete{
+#delete {
   vertical-align: middle;
   background-color: red;
 }
-
-
 
 main {
   @extend %distanciaBasica;
@@ -81,19 +79,15 @@ main {
           margin-bottom: 15px;
           .input {
             @extend %basicoInput;
-            //width: 90%;
-            //max-width: 400px;
           }
         }
       }
       .dataList {
-        label{
+        label {
           @extend %letra;
         }
         .input {
           @extend %basicoInput;
-          //width: 90%;
-          //max-width: 400px;
         }
         select {
           width: 200px;
@@ -107,18 +101,18 @@ main {
   }
 }
 
-footer{
+footer {
   @extend %footer;
-  .crud-table{
+  .crud-table {
     margin: 0 auto;
   }
 }
 
-@media(min-width: 1100px) {
-  main{
-    width:70%;
+@media (min-width: 1100px) {
+  main {
+    width: 70%;
   }
-  .divisionM-F{
+  .divisionM-F {
     display: grid;
     grid-template-columns: 50% 50%;
     padding-top: 100px;
@@ -126,16 +120,15 @@ footer{
   }
   // el elemento que intento modificar tiene estilos inline, debe modificarse eso para lograr el cambio en el elemento
   #footer {
-    .section{
-      #container{
-        .crud-table{
+    .section {
+      #container {
+        .crud-table {
           margin: 15px auto;
         }
       }
     }
   }
 }
-
 
 .table-responsive {
   margin: 15px auto;
@@ -160,39 +153,39 @@ footer{
   }
 }
 
-
-
 // clases para aparecer y desaparecer
 
-.hidden{
+.hidden {
   display: none;
 }
 
-.visible{
-  display: block;
+.visible {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-
-#sectionAnnadirFruta{
+#sectionAnnadirFruta {
   text-align: center;
   z-index: 999;
-  padding:15px;
+  padding: 15px;
 }
 
-.absolute{
+.absolute {
   background-color: #fff;
   position: absolute;
   top: 40%;
-  left:50%;
-  margin-left:-250px;
+  left: 50%;
+  margin-left: -250px;
   width: 100%;
-  max-width:500px;
+  max-width: 500px;
 }
 
-input[type="number"]{
+input[type="number"] {
   @extend %basicoInput;
 }
 
-.edit{
+.edit {
   color: yellow;
 }
